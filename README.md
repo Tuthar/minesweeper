@@ -29,6 +29,7 @@ The number tells you how many bombs are surrounding that square in a 3x3 grid. U
 
 ## TODOs
 - Finish converting the codebase to be Object-Oriented (right now the codebase is terrifyingly messy)
+- Fix bug where recursive clicking clicks over flagged cells
 - Fix very rare bug where the game finishes without all cells having been clicked
 - Add AI hint functionality
 - Add AI competition mode

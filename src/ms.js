@@ -69,6 +69,7 @@ function startGame() {
     setNumbers()
 }
 
+// REFACTORED
 function setGlobals() {
     // Sets global functions according to settings saved into local storage from config.html.
     
@@ -86,6 +87,7 @@ function setGlobals() {
 
 }
 
+// REFACTORED(ish)
 function resetGame() {
     // Resets game.
 
@@ -107,6 +109,7 @@ function resetGame() {
     bombsAI = new Set()
 }
 
+// REFACTORED
 function makeBoard() {
     // Creates HTML game board.
 
@@ -126,6 +129,7 @@ function makeBoard() {
     }
 }
 
+// REFACTORED
 function setBombs() {
     // Randomly places bombs across the board.
 
@@ -147,6 +151,7 @@ function setBombs() {
     globalListOfBombs.sort()
 }
 
+// REFACTORED
 function setNumbers() {
     // Gives each cell a number for the number of bombs surrounding it.
 
@@ -160,6 +165,7 @@ function setNumbers() {
     }   
 }
 
+// REFACTORED
 function findNum(row, column) {
     // Determine number of bombs surrounding a cell in a 3x3 grid.
 
@@ -203,14 +209,17 @@ function showNumberOfSurroundingBombs(cell) {
     cell.src = "./images/nums/" + cell.classList[0] + "-32.png"
 }
 
+// REFACTORED
 function isBomb(cell) {
     return cell.classList.contains("bomb")
 }
 
+// REFACTORED
 function notOutOfBounds(row, column, i, j) {
     return (row + i) >= 0 && (row + i) < globalNumOfRows && (column + j) >= 0 && (column + j) < globalNumOfCols
 }
 
+// REFACTORED
 function getCell(row, column) {
     return cell = document.getElementById("board").getElementsByTagName("tr")[row].getElementsByTagName("td")[column].getElementsByTagName("img")[0]
 }
@@ -366,6 +375,7 @@ function flagCell(row, column) {
     return 0
 }
 
+// REFACTORED
 function switchFlagMode() {
     // Changes flag mode.
 
@@ -593,3 +603,22 @@ function updateSentence(index) {
 
 function cleanSafes() {
 }
+
+function main() {
+    const NUM_ROWS = localStorage.getItem("numRows");
+    const NUM_COLS = localStorage.getItem("numCols");
+    
+    const EASY = Math.floor(NUM_COLS * NUM_ROWS / 7);
+    const MEDIUM = Math.floor(NUM_COLS * NUM_ROWS / 5);
+    const HARD = Math.floor(NUM_COLS * NUM_ROWS / 3);
+    
+    difficulty = localStorage.getItem("difficulty");
+    let numBombs;
+    if (difficulty == "Easy") numBombs = EASY;
+    else if (difficulty == "Medium") numBombs = MEDIUM;
+    else if (difficulty == "Hard") numBombs = HARD;
+
+    board: Board = new Board(NUM_ROWS, NUM_COLS, numBombs);
+    game: Game = new Game(board);
+    game.play();
+}  
