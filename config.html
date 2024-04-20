@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="static/styles.css" />
+        <link rel="stylesheet" href="static/configStyles.css" />
+        <script src="src/config.js"></script>
+        <title>Config</title>
+    </head>
+    <body>
+        <label>Number of rows:</label>
+        <select id="numRows"></select>
+        <p></p>
+        <label>Number of columns:</label>
+        <select id="numCols"></select>
+        <p></p>
+        <label>Difficulty:</label>
+        <select id="difficulty"></select>
+        <p></p>
+        <button id="confirm">Confirm</button>
+        <p id="thing"></p>
+        <p id="confirmSave"></p>
+        <button id="resetSettings">Reset settings</button>
+        <button id="triggerReset">Reset <b>all statistics</b></button>
+        <button id="confirmResetStatistics" hidden>Are you sure?</button>
+        <p id="timePlayed">Time played (all difficulties/sizes): </p>
+        <p id="bestTime">Best time: </p>
+        <p id="gamesWon">Games won: </p>
+        <p id="gamesPlayed">Games played: </p>
+        <p id="totGamesWon">Games won (all difficulties/sizes): </p>
+        <p id="totGamesPlayed">Games played (all difficulties/sizes): </p>
+    </body>
+</html>

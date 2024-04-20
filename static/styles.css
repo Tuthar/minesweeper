@@ -1,0 +1,89 @@
+body {
+    min-width: 500px;
+    min-height: 500px;
+    background-color: azure;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 1px;
+    text-emphasis-color: white;
+    margin: auto;
+}
+
+button {
+    text-align: center;
+    vertical-align: middle;
+    /* cursor: pointer; */
+}
+
+select {
+    text-align: center;
+}
+
+a {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.options {
+    display: inline;
+}
+
+#board {
+    padding-top: 2%;
+    margin: auto;
+}
+
+#timer {
+    padding-left: 2%;
+    padding-right: 5%;
+}
+
+#pad1 {
+    padding-right: 5%;
+}
+
+#resetGame {
+    scale: 110%;
+}
+
+#pauseGame {
+    scale: 110%;
+}
+
+#flagActivator {
+    padding-left: 5%;
+}
+
+#bombCount {
+    padding-left: 5%;
+}
+
+#space {
+    padding-bottom: 2%;
+}
+
+#leftroom {
+    padding-left: 25%;
+}
+
+#rightroom {
+    padding-right: 15%;
+}
+
+#victoryMessage{
+    text-align: center;
+}
+
+#newRecordMessage{
+    text-align: center;
+}
+
+#configLink {
+    position: absolute;
+    right: 10px;
+}

@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Minesweeper",
+    "description": "A Chrome extension to play Minesweeper!",
+    "version": "0.1",
+    "action": {
+      "default_popup": "minesweeper.html"
+    },
+    "icons": {
+      "16": "images/bomb/bomb16.png",
+      "32": "images/bomb/bomb32.png",
+      "48": "images/bomb/bomb48.png",
+      "64": "images/bomb/bomb64.png",
+      "128": "images/bomb/bomb128.png"
+    }
+  }

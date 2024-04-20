@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="static/styles.css" />
+        <script src="src/ms.js"></script>
+        <title>Minesweeper</title>
+    </head>
+    <body>
+        <div>
+            <a href="config.html" target="blank" id="configLink">Settings</a>
+            <h1>MINESWEEPER</h1>
+        </div>
+        <div id="options">
+            <!-- If you inspect element the timer it will break your statistics so don't do it... -->
+            <h2 id="timer" class="options"></h2>
+            <button id="resetGame" class="options">New game</button>
+            <button id="startAI" class="options">AI Play</button>
+            <p id="pad1" class="options"></p>
+            <button id="pauseGame" class="options">Pause</button>
+            <img id="flagActivator" class="options" src="images/flag/unclickedFlag32.png">
+            <h2 id="bombCount" class="options">Bombs left: </h2>
+        </div>
+        <table id="board" ></table>
+        <h2 id="victoryMessage"></h2>
+        <h2 id="newRecordMessage"></h2>
+    </body>
+</html>
